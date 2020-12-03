@@ -5,8 +5,8 @@ var express = require('express'),
     multerS3 = require('multer-s3');
 
 aws.config.update({
-    secretAccessKey: 'CSjTaQjuW9guZCarztQG7boa22PWZiaS1KiaQXjX',
-    accessKeyId: 'AKIA37SVVXBHQQGI3OSN',
+    secretAccessKey: secretAccessKey,
+    accessKeyId: accessKeyId,
     region: 'us-east-1'
 });
 
@@ -21,7 +21,7 @@ var upload = multer({
         bucket: 'cloud-cube',
         key: function (req, file, cb) {
             console.log(file.originalname);
-            cb(null, 'vystoq0cy0tf/public/testtt.pdf'); //use Date.now() for unique file keys
+            cb(null, 'path' + 'testtt.pdf'); //use Date.now() for unique file keys
         }
     })
 });
