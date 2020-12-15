@@ -17,7 +17,6 @@
     "gridfs-stream": "^1.1.1",
     "morgan": "^1.9.1",
     "multer-gridfs-storage": "^3.2.3",
-	"aws-sdk": "2.x",
     "multer-s3": "^2.7.0"
   },
   "devDependencies": {
